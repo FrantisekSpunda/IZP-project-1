@@ -12,7 +12,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "main.h"
 
 #define MAX_LINE_LENGTH 100
 #define MAX_RECOMAND_LENGTH 128 // max length of recomandation comes from ASCII table that has 128 characters
