@@ -1,84 +1,84 @@
-Brno
-Ostrava
-Plzen
-Liberec
-Olomouc
-Ceske Budejovice
-Usti nad Label
-Hradec Kralove
-Pardubice
-Zlin
-Havirov
-Kladno
-Most
-Opava
-Frydek Mistek
-Karvina
-Prague
-Brno
-Ostrava
-Plzen
-Liberec
-Olomouc
-Ceske Budejovice
-Usti nad Label
-Hradec Kralove
-Pardubice
-Zlin
-Havirov
-Kladno
-Most
-Opava
-Frydek Mistek
-Karvina
-Prague
-Brno
-Ostrava
-Plzen
-Liberec
-Olomouc
-Ceske Budejovice
-Usti nad Label
-Hradec Kralove
-Pardubice
-Zlin
-Havirov
-Kladno
-Most
-Opava
-Frydek Mistek
-Karvina
-Prague
-Brno
-Ostrava
-Plzen
-Liberec
-Olomouc
-Ceske Budejovice
-Usti nad Label
-Hradec Kralove
-Pardubice
-Zlin
-Havirov
-Kladno
-Most
-Opava
-Frydek Mistek
-Karvina
-Prague
-Brno
-Ostrava
-Plzen
-Liberec
-Olomouc
-Ceske Budejovice
-Usti nad Label
-Hradec Kralove
-Pardubice
-Zlin
-Havirov
-Kladno
-Most
-Opava
-Frydek Mistek
-Karvina
+      Brno
+        Ostrava
+         Plzen                      
+          Liberec
+          Olomouc           
+           Ceske Budejovice           
+            Usti nad Label           
+             Hradec Kralove
+              Pardubice           
+               Zlin             
+                Havirov
+                 Kladno           
+                  Most
+                   Opava 
+                   Frydek Mistek           
+                    Karvina            
+                     Prague          
+                      Brno           
+                       Ostrava
+                        Plzen 
+                         Liberec        
+                          Olomouc
+                           Ceske Budejovice
+                            Usti nad Label           
+                             Hradec Kralove
+                              Pardubice           
+                               Zlin
+                                Havirov
+                                Kladno
+                                 Most
+                                  Opava
+                                   Frydek Mistek
+                                    Karvina
+                                     Prague
+                                      Brno
+                                       Ostrava
+                                        Plzen
+                                         Liberec
+                                         Olomouc
+                                         Ceske Budejovice
+                                         Usti nad Label
+                                         Hradec Kralove
+                                         Pardubice
+                                         Zlin
+                                         Havirov
+                                         Kladno
+                                         Most
+                                         Opava
+                                         Frydek Mistek
+                                         Karvina
+                                         Prague
+                                         Brno
+                                         Ostrava
+                                         Plzen
+                                         Liberec
+                                         Olomouc
+                                         Ceske Budejovice
+                                         Usti nad Label
+                                         Hradec Kralove
+                                         Pardubice
+                                         Zlin
+                                         Havirov
+                                         Kladno
+                                         Most
+                                         Opava
+                                         Frydek Mistek
+                                         Karvina
+                                         Prague
+                                         Brno
+                                         Ostrava
+                                         Plzen
+                                         Liberec
+                                         Olomouc
+                                         Ceske Budejovice
+                                         Usti nad Label
+                                         Hradec Kralove
+                                         Pardubice
+                                         Zlin
+                                         Havirov
+                                         Kladno
+                                         Most
+                                         Opava
+                                         Frydek Mistek
+                                         Karvina

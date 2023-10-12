@@ -24,10 +24,11 @@ typedef struct
   char last_found[MAX_LINE_LENGTH];
 } Recomandation;
 
-void remove_diacritics(char *str);
-void remove_char(char *str, unsigned int index);
-char string_is_similar(char *input, char *str);
-void join_user_arguments(char *outputString, int argc, char *argv[]);
+void diacriticsrm(char *str);
+void charrm(char *str, unsigned int index);
+char strcompare(char *input, char *str);
+void argjoin(char *outputString, int argc, char *argv[]);
+void strtrim(char *str);
 void find_recomandations(Recomandation *recomandation, char *input, char *address);
 
 int main(int argc, char **argv)
@@ -37,8 +38,9 @@ int main(int argc, char **argv)
   start = clock();
 
   char user_input[MAX_LINE_LENGTH] = "";
-  join_user_arguments(user_input, argc, argv);
-  remove_diacritics(user_input);
+  argjoin(user_input, argc, argv);
+  strtrim(user_input);
+  diacriticsrm(user_input);
 
   char address[MAX_LINE_LENGTH]; // Variable for one line of file
 
@@ -50,7 +52,8 @@ int main(int argc, char **argv)
 
   while (fgets(address, sizeof(address), stdin) != NULL) // Get one line of file
   {
-    remove_diacritics(address); // We have to remove diacritics since we are removing diacritics from user input
+    strtrim(address);
+    diacriticsrm(address); // We have to remove diacritics since we are removing diacritics from user input
     find_recomandations(&recomandation, user_input, address);
   }
 
@@ -70,6 +73,29 @@ int main(int argc, char **argv)
 }
 
 /**
+ * @brief Remove spaces, tabs, newlines etc. from start and end of string.
+ *
+ * @param str string to trim
+ */
+void strtrim(char *str)
+{
+  int start = 0;
+  int end = strlen(str) - 1;
+
+  while ((isspace(str[start]) && str[start] != '\n'))
+    start++;
+
+  while ((isspace(str[end]) && end > start))
+    end--;
+
+  if (start > 0 || (unsigned int)end < strlen(str) - 1)
+  {
+    memmove(str, str + start, end - start + 1);
+    str[end - start + 1] = '\0';
+  }
+}
+
+/**
  * @brief Find recomandations for one line. If input is similar to line, increase found, found following character and save last address.
  *
  * @param recomandation struct of all returning data { found, recomand, last_found }
@@ -78,7 +104,7 @@ int main(int argc, char **argv)
  */
 void find_recomandations(Recomandation *recomandation, char *input, char *line)
 {
-  if (string_is_similar(input, line))
+  if (strcompare(input, line))
   {
     recomandation->found++; // If we found similar line, increase found
 
@@ -99,7 +125,7 @@ void find_recomandations(Recomandation *recomandation, char *input, char *line)
  * @param argc number of arguments
  * @param argv arguments
  */
-void join_user_arguments(char *outputString, int argc, char **argv)
+void argjoin(char *outputString, int argc, char **argv)
 {
   // Join user arguments
   for (int i = 1; i < argc; i++)
@@ -117,7 +143,7 @@ void join_user_arguments(char *outputString, int argc, char **argv)
  * @param str string to compare
  * @return char - 1 if similar, 0 if not
  */
-char string_is_similar(char *input, char *str)
+char strcompare(char *input, char *str)
 {
   for (unsigned int i = 0; i < strlen(input); i++)
   {
@@ -136,7 +162,7 @@ char string_is_similar(char *input, char *str)
  * @param str string to remove character from
  * @param index index of character to remove
  */
-void remove_char(char *str, unsigned int index)
+void charrm(char *str, unsigned int index)
 {
   if (index < strlen(str))
   {
@@ -152,7 +178,7 @@ void remove_char(char *str, unsigned int index)
  *
  * @param str string to remove diacritics from
  */
-void remove_diacritics(char *str)
+void diacriticsrm(char *str)
 {
   char diacritics[] = "áÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ";
   char withoutDiacritics[] = "a A c C d D e E e E i I n N o O r R s S t T u U u U y Y z Z ";
@@ -166,7 +192,7 @@ void remove_diacritics(char *str)
       if (str[i] == diacritics[j] && str[i + 1] == diacritics[j + 1])
       {
         str[i] = withoutDiacritics[j];
-        remove_char(str, i + 1);
+        charrm(str, i + 1);
         break; // Pokud byl znak nalezen a nahrazen, ukončíme smyčku
       }
     }
