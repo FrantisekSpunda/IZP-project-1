@@ -1,23 +1,84 @@
-Přaha 
-Přc
-Brnof
-Brec
-Brocfjeiobbbbbbbbbbb
-Brod
+Brno
 Ostrava
 Plzen
 Liberec
 Olomouc
+Ceske Budejovice
+Usti nad Label
 Hradec Kralove
-Usti nad Labem
-Krizova 17 Brno
-Namesti Svobody 5 Brnow
-Husova 10 Brno
-Jana Uhra 23 Brno
-Ceska 8 Brno
-Lidicka 31 Brno
-Stefanikova 14 Brno
-Kounicova 7 Brno
-Uvoz 19 Brno
-Palackeho trida 12 Brno
-Palackeho trida 12 Brn
+Pardubice
+Zlin
+Havirov
+Kladno
+Most
+Opava
+Frydek Mistek
+Karvina
+Prague
+Brno
+Ostrava
+Plzen
+Liberec
+Olomouc
+Ceske Budejovice
+Usti nad Label
+Hradec Kralove
+Pardubice
+Zlin
+Havirov
+Kladno
+Most
+Opava
+Frydek Mistek
+Karvina
+Prague
+Brno
+Ostrava
+Plzen
+Liberec
+Olomouc
+Ceske Budejovice
+Usti nad Label
+Hradec Kralove
+Pardubice
+Zlin
+Havirov
+Kladno
+Most
+Opava
+Frydek Mistek
+Karvina
+Prague
+Brno
+Ostrava
+Plzen
+Liberec
+Olomouc
+Ceske Budejovice
+Usti nad Label
+Hradec Kralove
+Pardubice
+Zlin
+Havirov
+Kladno
+Most
+Opava
+Frydek Mistek
+Karvina
+Prague
+Brno
+Ostrava
+Plzen
+Liberec
+Olomouc
+Ceske Budejovice
+Usti nad Label
+Hradec Kralove
+Pardubice
+Zlin
+Havirov
+Kladno
+Most
+Opava
+Frydek Mistek
+Karvina

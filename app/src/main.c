@@ -1,7 +1,7 @@
 /**
  * @file main.c
  * @author Frantisek Spunda (xspundaf00)
- * @date 2023-11-10
+ * @date 2023-12-10
  * @brief Description of your project
  *
  * @copyright Copyright (c) 2023
@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <time.h>
 
 #define MAX_LINE_LENGTH 100
 #define MAX_RECOMAND_LENGTH 128 // max length of recomandation comes from ASCII table that has 128 characters
@@ -31,6 +32,10 @@ void find_recomandations(Recomandation *recomandation, char *input, char *addres
 
 int main(int argc, char **argv)
 {
+  time_t start, end;
+  double cpu_time_used;
+  start = clock();
+
   char user_input[MAX_LINE_LENGTH] = "";
   join_user_arguments(user_input, argc, argv);
   remove_diacritics(user_input);
@@ -49,12 +54,17 @@ int main(int argc, char **argv)
     find_recomandations(&recomandation, user_input, address);
   }
 
+  end = clock();
   if (recomandation.found > 1)
     printf("\033[0;34m Enable: \033[0m%s\n", recomandation.recomand);
   else if (recomandation.found == 1)
     printf("\033[0;32m Found: \033[0m%s\n", recomandation.last_found);
   else
     printf("Not found\n");
+
+  cpu_time_used = ((double)(end - start) * 1000.0) / CLOCKS_PER_SEC;
+
+  printf("Time: %f ms\n", cpu_time_used);
 
   return 0;
 }
