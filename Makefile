@@ -1,3 +1,4 @@
+# Default compilation - gcc -std=c11 -Wall -Wextra -Werror main.c
 # Configuration of creating configuration file
 CONFIG_FILE = config.cfg
 CONFIG_EXAMPLE = example.config.cfg
