@@ -34,6 +34,7 @@ void string_order(char *string);
 void find_recomandations(Recomandation *recomandation, char *input, char *address);
 void print_recomandation(Recomandation *recomandation, char user_input[MAX_LINE_LENGTH]);
 int format_check(char *input);
+void string_tolower(char *string);
 
 int main(int argc, char **argv)
 {
@@ -99,12 +100,18 @@ void print_recomandation(Recomandation *recomandation, char user_input[MAX_LINE_
   int same_as_arg = -1;
   for (int i = 0; i < recomandation->found - 1; i++)
   {
+    char tolower_recomendation[MAX_RECOMAND_LENGTH], tolower_recomendation_next[MAX_RECOMAND_LENGTH];
+    strcpy(tolower_recomendation, recomandation->last_found[i]);
+    strcpy(tolower_recomendation_next, recomandation->last_found[i + 1]);
+    string_tolower(tolower_recomendation);
+    string_tolower(tolower_recomendation_next);
+
     // Find duplicit values
-    if (strcmp(recomandation->last_found[i], recomandation->last_found[i + 1]))
+    if (strcmp(tolower_recomendation, tolower_recomendation_next))
       duplicit = 0;
 
     // Check if we found exact same value as user input
-    if (!strcmp(recomandation->last_found[i], user_input))
+    if (!strcmp(tolower_recomendation, user_input))
       same_as_arg = i;
   }
 
@@ -120,6 +127,12 @@ void print_recomandation(Recomandation *recomandation, char user_input[MAX_LINE_
     printf("Found: %s\n", recomandation->last_found[recomandation->found - 1]);
   else
     printf("Not found\n");
+}
+
+void string_tolower(char *string)
+{
+  for (int i = 0; string[i]; i++)
+    string[i] = tolower(string[i]);
 }
 
 /**
